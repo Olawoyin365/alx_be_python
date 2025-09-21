@@ -7,5 +7,7 @@ match priority:
         if time_bound == "yes":
             reminder += "that requires immediate attention today!"
     case "low":
-        reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
+        reminder = f"Note: '{task}' is a low priority task. "
+        if time_bound == "no":
+            reminder += "Consider completing it when you have free time."
 print(reminder)
