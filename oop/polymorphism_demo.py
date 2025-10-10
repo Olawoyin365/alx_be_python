@@ -1,3 +1,5 @@
+import math
+
 class Shape:
     def area(self):
         raise NotImplementedError("this method is expected to be overridden in any subclasses")
@@ -15,4 +17,4 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return 3.14 * (self.radius ** 2)
+        return math.pi * (self.radius ** 2)
